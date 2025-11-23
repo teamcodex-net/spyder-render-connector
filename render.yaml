@@ -3,9 +3,7 @@ services:
     name: spyder-books-connector
     runtime: python
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn app:app
+    startCommand: gunicorn app_standalone:app
     envVars:
-      - key: EC2_API_URL
-        value: http://44.225.226.126:8571
       - key: PYTHON_VERSION
         value: 3.11.0
